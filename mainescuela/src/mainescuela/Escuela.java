@@ -1,7 +1,6 @@
 
 package mainescuela;
 
-
 public class Escuela {
     private int id;
     private String nombre;
