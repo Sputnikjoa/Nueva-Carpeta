@@ -67,7 +67,7 @@ public class Profesor {
     }
 
     public String getSueldo() {
-        return sueldo;
+        return Double.toString(sueldo);
     }
 
     public void setSueldo(double sueldo) {

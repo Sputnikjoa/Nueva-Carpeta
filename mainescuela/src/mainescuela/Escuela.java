@@ -39,12 +39,12 @@ public class Escuela {
             System.out.println("Profesor asignado a grupo: "+aux.getProf().getNombre());
         }
         
-        System.out.println("NUmero de materias: " + Materia.numMaterias());
+        System.out.println("Numero de materias: " + Materia.numMaterias());
         for(Materia aux: materias){
             System.out.println("Nombre de la materia: " + aux.getMateria());
             
         }
-        System.out.println("NUmero de profesores: " + Profesor.numProf());
+        System.out.println("Numero de profesores: " + Profesor.numProf());
         for(Profesor aux: profesores){
             System.out.println(aux.getNombre()); 
         }
