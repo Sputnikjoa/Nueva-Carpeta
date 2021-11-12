@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class Grupo {
     private String nombre;
     private ArrayList <Alumno> alumnos;
-    private Profesor prof;
+    private Profesor prof; 
+    private Proftitular profesortitular; //clase hija de profesor
+    
     private ArrayList <Profesor> profesores;
     
     private static int numGrupos=0;
