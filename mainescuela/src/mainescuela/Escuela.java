@@ -1,21 +1,58 @@
 
 package mainescuela;
 
+import java.util.*;
+
 public class Escuela {
-    private int id;
-    private String nombre;
+    private ArrayList<Materia> materias;
+    private ArrayList<Grupo> grupos;
+    private ArrayList<Alumno> alumnos;
+    private ArrayList<Profesor> profesores;
+    private String nombreEscuela;
     
-    public Escuela(int id, String nombre){
-        this.id=id;
-        this.nombre=nombre;
+    public Escuela(String nombre){
+        nombreEscuela = nombre;
+        materias = new ArrayList<>();
+        grupos = new ArrayList<>();
+        profesores = new ArrayList<>();
     }
-
-    public int getId() {
-        return id;
+    
+    public String getNombre(){
+        return nombreEscuela;
     }
-
-    public String getNombre() {
-        return nombre;
+    
+    
+    public void agregarMateria(Materia m){
+        materias.add(m);
     }
+    public void agregarGrupo(Grupo m){
+        grupos.add(m);
+    }
+    public void agregarProfesor(Profesor m){
+        profesores.add(m);
+    }
+    
+    public void imprimirDatosGen(){
+        System.out.println("Numero de grupos: "+Grupo.numGrupos());
+        for(Grupo aux: grupos){
+            System.out.println("Nombre del grupo: "+aux.getNomGrup());
+            System.out.println("Profesor asignado a grupo: "+aux.getProf().getNombre());
+        }
+        
+        System.out.println("NUmero de materias: " + Materia.numMaterias());
+        for(Materia aux: materias){
+            System.out.println("Nombre de la materia: " + aux.getMateria());
+            
+        }
+        System.out.println("NUmero de profesores: " + Profesor.numProf());
+        for(Profesor aux: profesores){
+            System.out.println(aux.getNombre()); 
+        }
+        
+        System.out.println("Numero de alumnos: " + Alumno.numAlumnos());
+        for(Grupo aux: grupos){
+            aux.mostrarAlumnos();
+        }
+    }  
     
 }

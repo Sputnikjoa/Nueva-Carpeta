@@ -4,8 +4,61 @@ package mainescuela;
 public class Mainescuela {
 
     public static void main(String[] args) {
-        Escuela escuela1=new Escuela(1,"ESCOM");
+        //Creacion de la universidad
+        Escuela escuela1 = new Escuela("ESCOM");
         System.out.println(escuela1.getNombre());
+
+        //Creacion de las materias
+        Materia materia1 = new Materia("Algebra lineal");
+        Materia materia2 = new Materia("Fundamentos programacion");
+        Materia materia3 = new Materia("Paradigmas programacion");
+        Materia materia4 = new Materia("Finanzas empresariales");
+        Materia materia5 = new Materia("Bases de datos");
+        Materia materia6 = new Materia("Circuitos electricos");
+        Materia materia7 = new Materia("Algoritmos");
+        Materia materia8 = new Materia("Matematicas avanzadas");
+
+        //Creacion de los profesores
+        Profesor profesor1 = new Profesor(1234, "Juan Perez", "juanprz@hotmail.com");
+        Profesor profesor2 = new Profesor(2345, "Angel", "angel@hotmail.com");
+        Profesor profesor3 = new Profesor(3456, "Jair", "jair@hotmail.com");
+        Profesor profesor4 = new Profesor(4567, "Raul", "raulhn@hotmail.com");
+        Profesor profesor5 = new Profesor(5678, "Javier", "javierr@hotmail.com");
+        Profesor profesor6 = new Profesor(6789, "Tamara", "tmra@hotmail.com");
+        Profesor profesor7 = new Profesor(7890, "Monserrat", "monsett@hotmail.com");
+        Profesor profesor8 = new Profesor(8901, "Eduardo", "eduardo@hotmail.com");
+
+        profesor1.informacion();
+        profesor1.setSueldo(5434);
+        profesor1.informacion();
+
+        //Creacion de alumnos
+        Alumno alum1 = new Alumno("Jorge", 2018000, 3);
+        Alumno alum2 = new Alumno("Joaquin", 2018001, 3);
+
+        //Creacion de grupos
+        Grupo grupo35 = new Grupo("3CM5");
+
+
+        //Agregando profesores a un grupo
+        grupo35.addProfe(profesor1);
+        grupo35.addProfe(profesor2);
+        grupo35.addProfe(profesor3);
+        grupo35.addProfe(profesor4);
+
+        //Agregando alumnos al grupo
+        grupo35.addAlumno(alum1);
+        grupo35.addAlumno(alum2);
+
+        System.out.println("\nLos profesores del gurpo 3CM5 son: ");
+        grupo35.mostrarProfesores();
+        System.out.println("\nLos alumnos del gurpo 3CM5 son: ");
+        grupo35.mostrarAlumnos();
+
+        
+        System.out.println("\nGrupos del profesor1: ");
+        profesor1.getGrupos();
+
     }
     
 }
