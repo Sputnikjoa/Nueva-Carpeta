@@ -8,6 +8,7 @@ public class Profinvitado extends Profesor {
         super(matricula, nombre, correo);
         this.fecha_contrato=fecha_contrato;
         this.fecha_final=fecha_final;
+        tipo="invitado";
     }
 
     public String getContrato(){

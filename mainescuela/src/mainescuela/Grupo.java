@@ -6,8 +6,9 @@ public class Grupo {
     private String nombre;
     private ArrayList <Alumno> alumnos;
     private Profesor prof; 
-    private Proftitular profesortitular; //clase hija de profesor
-    
+   // private Proftitular profesortitular; //clase hija de profesor
+   // private Profinvitado profesorinvitado;
+    // private Profmediotiempo profesormediotiempo;
     private ArrayList <Profesor> profesores;
     
     private static int numGrupos=0;
@@ -19,8 +20,17 @@ public class Grupo {
         profesores = new ArrayList<>();
     }
     
-    public void asignarProf (Profesor p){
+
+    public void asignarProf(Proftitular p){
         prof=p;
+    }
+
+    public void asignarProf(Profmediotiempo p){
+        prof=p;
+    }
+
+    public void asignarProf(Profinvitado i){
+        prof=i;
     }
     
     public void addAlumno(Alumno a){

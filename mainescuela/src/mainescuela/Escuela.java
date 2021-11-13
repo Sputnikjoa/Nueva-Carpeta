@@ -21,7 +21,6 @@ public class Escuela {
         return nombreEscuela;
     }
     
-    
     public void agregarMateria(Materia m){
         materias.add(m);
     }
@@ -30,6 +29,9 @@ public class Escuela {
     }
     public void agregarProfesor(Profesor m){
         profesores.add(m);
+    }
+    public void agregarAlumno(Alumno a){
+        alumnos.add(a);
     }
     
     public void imprimirDatosGen(){

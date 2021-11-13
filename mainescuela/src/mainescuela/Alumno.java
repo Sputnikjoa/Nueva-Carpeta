@@ -42,5 +42,19 @@ public class Alumno {
             i++;
         }
     }
+
+    public void agregarCalificacion(String materia, int calificacion){
+        for(Materia aux: materiaCursa){
+            if(aux.getMateria().equals(materia)){
+                aux.setCalificacion(calificacion);
+            }
+        }
+    }
+
+    public void imprimirCalificaciones(){
+        for(Materia aux: materiaCursa){
+            System.out.println(aux.getMateria()+"="+ aux.getCalificacion());
+        }
+    }
     
 }

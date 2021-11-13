@@ -1,13 +1,15 @@
 
 package mainescuela;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class Mainescuela {
 
     public static void main(String[] args) {
         //Creacion de la universidad
         Escuela escuela1 = new Escuela("ESCOM");
         System.out.println(escuela1.getNombre());
-
+        
         //Creacion de las materias
         Materia materia1 = new Materia("Algebra lineal");
         Materia materia2 = new Materia("Fundamentos programacion");
@@ -19,7 +21,7 @@ public class Mainescuela {
         Materia materia8 = new Materia("Matematicas avanzadas");
 
         //Creacion de los profesores
-        Profesor profesor1 = new Profesor(1234, "Juan Perez", "juanprz@hotmail.com");
+        Proftitular profesor1 = new Proftitular(1234, "Juan Perez", "juanprz@hotmail.com");
         Profesor profesor2 = new Profesor(2345, "Angel", "angel@hotmail.com");
         Profesor profesor3 = new Profesor(3456, "Jair", "jair@hotmail.com");
         Profesor profesor4 = new Profesor(4567, "Raul", "raulhn@hotmail.com");
@@ -42,6 +44,10 @@ public class Mainescuela {
 
         //Agregando profesores a un grupo
         grupo35.addProfe(profesor1);
+        profesor1.agregarGrupo(grupo35);
+
+        //Aqui debemos agregar de manera simultanea profesor al grupo y grupo a profesor.
+
         grupo35.addProfe(profesor2);
         grupo35.addProfe(profesor3);
         grupo35.addProfe(profesor4);
@@ -50,15 +56,21 @@ public class Mainescuela {
         grupo35.addAlumno(alum1);
         grupo35.addAlumno(alum2);
 
-        System.out.println("\nLos profesores del gurpo 3CM5 son: ");
+        System.out.println("\nLos profesores del grupo 3CM5 son: ");
         grupo35.mostrarProfesores();
-        System.out.println("\nLos alumnos del gurpo 3CM5 son: ");
+        System.out.println("\nLos alumnos del grupo 3CM5 son: ");
         grupo35.mostrarAlumnos();
 
         
         System.out.println("\nGrupos del profesor1: ");
-        profesor1.getGrupos();
+        profesor1.imprimirGrupos();
 
+        alum1.agregarMateria(materia1);
+        alum1.agregarCalificacion(materia1.getMateria(), 9);
+        alum1.agregarMateria(materia2);
+        alum1.agregarCalificacion(materia2.getMateria(), 6);
+        alum1.imprimirCalificaciones();
+        escuela1.
     }
     
 }

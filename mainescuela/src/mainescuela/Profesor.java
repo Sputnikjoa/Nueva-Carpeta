@@ -9,6 +9,7 @@ public class Profesor {
     private ArrayList<Materia> materias;
     private ArrayList<Grupo> grupos;
     private double sueldo = 0;
+    protected String tipo;
 
     private static int profesor = 0;
 
@@ -20,7 +21,9 @@ public class Profesor {
         materias = new ArrayList<>();
         profesor++;
     }
-
+    public void agregarGrupo(Grupo g){
+        grupos.add(g);
+    }
     public String getNombre() {
         return nombre;
     }
@@ -75,13 +78,25 @@ public class Profesor {
     }
 
     public void informacion() {
-        System.out.println("Matricula: " + matricula + ", Nombre: " + nombre + ", Correo: " + correo +  ", Sueldo: $" + sueldo);
+        System.out.println("Matricula: " + matricula + ", Tipo: "+ tipo+ "\n Nombre: " + nombre + ", Correo: " + correo +  ", Sueldo: $" + sueldo);
     }
 
     public String toString(){
         return "---------------\nMatricula: " + matricula + "\nNombre profesor: " + nombre + "\nCorreo: " + correo;
     }
 
+    public void setTipo(String tipo){
+        this.tipo=tipo;
+    }
+
+    public String getTipo(){
+        return tipo;
+    }
+    public void imprimirGrupos(){
+        for(Grupo aux : grupos){
+            System.out.println(aux.getNomGrup());
+        }
+    }
 }
 
 
