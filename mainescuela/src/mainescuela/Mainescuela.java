@@ -70,7 +70,7 @@ public class Mainescuela {
         alum1.agregarMateria(materia2);
         alum1.agregarCalificacion(materia2.getMateria(), 6);
         alum1.imprimirCalificaciones();
-        
+        escuela1.agregarAlumno(alum2);
     }
     
 }
