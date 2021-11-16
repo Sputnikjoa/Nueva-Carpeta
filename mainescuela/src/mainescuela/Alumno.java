@@ -7,7 +7,8 @@ public class Alumno {
     private String nombre;
     private int numeroBoleta;
     private ArrayList<Materia> materiaCursa;
-    private Grupo grupo;
+    //private Grupo grupo;
+    private ArrayList<Grupo> grupos;
     private int semestre;
     
     private static int alumnos=0;
@@ -16,13 +17,18 @@ public class Alumno {
         nombre=nombreAl;
         this.semestre=semestre;
         numeroBoleta=boleta;
-        materiaCursa= new ArrayList<>();
+        materiaCursa = new ArrayList<>();
+        grupos = new ArrayList<>();
         alumnos++;
     }
     public static int numAlumnos(){
         return alumnos;
     }
     
+    public void agregarGrupo(Grupo gpo){
+        grupos.add(gpo);
+    }
+
     public void agregarMateria(Materia m){
         materiaCursa.add(m);
     }
@@ -52,8 +58,9 @@ public class Alumno {
     }
 
     public void imprimirCalificaciones(){
+        System.out.println("Calificaciones de " + nombre + ":");
         for(Materia aux: materiaCursa){
-            System.out.println(aux.getMateria()+"="+ aux.getCalificacion());
+            System.out.println(aux.getMateria()+" = "+ aux.getCalificacion());
         }
     }
     

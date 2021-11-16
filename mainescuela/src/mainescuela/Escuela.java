@@ -15,6 +15,7 @@ public class Escuela {
         materias = new ArrayList<>();
         grupos = new ArrayList<>();
         profesores = new ArrayList<>();
+        alumnos = new ArrayList<>();
     }
     
     public String getNombre(){
@@ -51,10 +52,8 @@ public class Escuela {
             System.out.println(aux.getNombre()); 
         }
         
-        System.out.println("Numero de alumnos: " + Alumno.numAlumnos());
-        for(Grupo aux: grupos){
-            aux.mostrarAlumnos();
-        }
+        System.out.println("Numero de alumnos: " + alumnos.size());
+        
     }  
     
 }

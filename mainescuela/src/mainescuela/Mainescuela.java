@@ -34,23 +34,30 @@ public class Mainescuela {
         profesor1.setSueldo(5434);
         profesor1.informacion();
 
-        //Creacion de alumnos
-        Alumno alum1 = new Alumno("Jorge", 2018000, 3);
+        //Creacion de alumnos y agregarlos a la escuela
+        Alumno alum1 = new Alumno("Jorge Manuel", 2018000, 3);
         Alumno alum2 = new Alumno("Joaquin", 2018001, 3);
+        Alumno alum3 = new Alumno("Joel", 2018002, 4);
+        escuela1.agregarAlumno(alum1);
+        escuela1.agregarAlumno(alum2);
+        escuela1.agregarAlumno(alum3);
 
         //Creacion de grupos
         Grupo grupo35 = new Grupo("3CM5");
 
-
         //Agregando profesores a un grupo
+        //Aqui debemos agregar de manera simultanea profesor al grupo y grupo a profesor.
         grupo35.addProfe(profesor1);
         profesor1.agregarGrupo(grupo35);
 
-        //Aqui debemos agregar de manera simultanea profesor al grupo y grupo a profesor.
-
         grupo35.addProfe(profesor2);
+        profesor2.agregarGrupo(grupo35);
+
         grupo35.addProfe(profesor3);
+        profesor3.agregarGrupo(grupo35);
+
         grupo35.addProfe(profesor4);
+        profesor4.agregarGrupo(grupo35);
 
         //Agregando alumnos al grupo
         grupo35.addAlumno(alum1);
@@ -70,7 +77,10 @@ public class Mainescuela {
         alum1.agregarMateria(materia2);
         alum1.agregarCalificacion(materia2.getMateria(), 6);
         alum1.imprimirCalificaciones();
-        //escuela1.agregarAlumno(alum2);
+        
+
+        System.out.println("Datos de escuela1:\n");
+        escuela1.imprimirDatosGen();
     }
     
 }

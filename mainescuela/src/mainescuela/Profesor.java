@@ -3,12 +3,12 @@ package mainescuela;
 import java.util.ArrayList;
 
 public class Profesor {
-    private int matricula;
-    private String nombre;
-    private String correo;
+    protected int matricula;
+    protected String nombre;
+    protected String correo;
     private ArrayList<Materia> materias;
     private ArrayList<Grupo> grupos;
-    private double sueldo = 0;
+    protected double sueldo = 0;
     protected String tipo;
 
     private static int profesor = 0;
