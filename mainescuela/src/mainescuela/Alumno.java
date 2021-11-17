@@ -10,13 +10,15 @@ public class Alumno {
     //private Grupo grupo;
     private ArrayList<Grupo> grupos;
     private int semestre;
+    private String modalidad;
     
     private static int alumnos=0;
     
-    public Alumno(String nombreAl,int boleta,int semestre){
+    public Alumno(String nombreAl,int boleta,int semestre, String modalidad){
         nombre=nombreAl;
         this.semestre=semestre;
         numeroBoleta=boleta;
+        this.modalidad=modalidad;
         materiaCursa = new ArrayList<>();
         grupos = new ArrayList<>();
         alumnos++;
@@ -34,7 +36,7 @@ public class Alumno {
     }
     
     public String toString(){
-        return "---------------\nNumero de boleta: "+numeroBoleta+"\nNombre alumno: "+nombre;
+        return "---------------\nNumero de boleta: "+numeroBoleta+"\nNombre alumno: "+nombre+"\nModalidad: "+modalidad;
     }
     
     public int getsemestre(){
@@ -55,6 +57,14 @@ public class Alumno {
                 aux.setCalificacion(calificacion);
             }
         }
+    }
+
+    public void setModalidad(String m){
+        modalidad=m;
+    }
+
+    public String getModalidad(){
+        return modalidad;
     }
 
     public void imprimirCalificaciones(){
