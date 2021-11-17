@@ -77,7 +77,10 @@ public class Mainescuela {
         alum1.agregarMateria(materia2);
         alum1.agregarCalificacion(materia2.getMateria(), 6);
         alum1.imprimirCalificaciones();
-        
+        personalAdm trabajador1 = new personalAdm("Juan Perez",10,"Conserje",3500.00);
+        personalAdm trabajador2 = new personalAdm("Carlos Rivera", 11, "Analista", 10000.00);
+        escuela1.agregarpersonal(trabajador1);
+        escuela1.agregarpersonal(trabajador2);
 
         System.out.println("Datos de escuela1:\n");
         escuela1.imprimirDatosGen();

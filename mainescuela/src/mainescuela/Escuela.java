@@ -8,6 +8,7 @@ public class Escuela {
     private ArrayList<Grupo> grupos;
     private ArrayList<Alumno> alumnos;
     private ArrayList<Profesor> profesores;
+    private ArrayList<personalAdm> personal;
     private String nombreEscuela;
     
     public Escuela(String nombre){
@@ -16,6 +17,7 @@ public class Escuela {
         grupos = new ArrayList<>();
         profesores = new ArrayList<>();
         alumnos = new ArrayList<>();
+        personal = new ArrayList<>();
     }
     
     public String getNombre(){
@@ -34,7 +36,9 @@ public class Escuela {
     public void agregarAlumno(Alumno a){
         alumnos.add(a);
     }
-    
+    public void agregarpersonal(personalAdm a){
+        personal.add(a);
+    }
     public void imprimirDatosGen(){
         System.out.println("Numero de grupos: "+Grupo.numGrupos());
         for(Grupo aux: grupos){
@@ -54,6 +58,10 @@ public class Escuela {
         
         System.out.println("Numero de alumnos: " + alumnos.size());
         
+        System.out.println("Personal adm:"+personal.size());
+        for(personalAdm aux: personal){
+            System.out.println(aux.toString()); 
+        }
     }  
     
 }

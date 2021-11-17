@@ -20,7 +20,7 @@ public class personalAdm {
     }
     
     public String toString(){
-        return "Id Trabajador: " + idTrabajador + "\nNombre: " + nombre + "\nCargo: " + cargo;
+        return "Id Trabajador: " + idTrabajador + "   Nombre: " + nombre + "   Cargo: " + cargo;
     }
     
     public int getid(){
