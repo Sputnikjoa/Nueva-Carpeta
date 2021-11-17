@@ -9,4 +9,6 @@ public class Profmediotiempo extends Proftitular{
         this.turno=turno;
         tipo="medio tiempo";
     }
+
+    
 }

@@ -1,8 +1,6 @@
 
 package mainescuela;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class Mainescuela {
 
     public static void main(String[] args) {
@@ -55,27 +53,43 @@ public class Mainescuela {
         //Aqui debemos agregar de manera simultanea profesor al grupo y grupo a profesor.
         grupo35.addProfe(profesor1);
         profesor1.agregarGrupo(grupo35);
-
+        materia1.agregarProfesor(profesor1);
+        profesor1.agregarMateria(materia1);
+        
         grupo35.addProfe(profesor2);
         profesor2.agregarGrupo(grupo35);
+        materia2.agregarProfesor(profesor2);
+        profesor2.agregarMateria(materia2);
 
         grupo35.addProfe(profesor3);
         profesor3.agregarGrupo(grupo35);
+        materia3.agregarProfesor(profesor3);
+        profesor3.agregarMateria(materia3);
 
         grupo35.addProfe(profesor4);
         profesor4.agregarGrupo(grupo35);
+        materia4.agregarProfesor(profesor4);
+        profesor4.agregarMateria(materia4);
         
         grupo37.addProfe(profesor4);
         profesor4.agregarGrupo(grupo37);
+        materia8.agregarProfesor(profesor4);
+        profesor4.agregarMateria(materia8);
 
         grupo37.addProfe(profesor5);
         profesor5.agregarGrupo(grupo37);
+        materia5.agregarProfesor(profesor5);
+        profesor5.agregarMateria(materia5);
 
         grupo37.addProfe(profesor6);
         profesor6.agregarGrupo(grupo37);
+        materia7.agregarProfesor(profesor6);
+        profesor6.agregarMateria(materia7);
 
         grupo37.addProfe(profesor7);
         profesor7.agregarGrupo(grupo37);
+        materia7.agregarProfesor(profesor7);
+        profesor7.agregarMateria(materia7);
 
         //Agregando alumnos al grupo
         grupo35.addAlumno(alum1);
@@ -101,12 +115,14 @@ public class Mainescuela {
         System.out.println("\nGrupos del profesor4: ");
         profesor4.imprimirGrupos();
 
+        //Insertar calificaciones al alumno
         alum1.agregarMateria(materia1);
         alum1.agregarCalificacion(materia1.getMateria(), 9);
         alum1.agregarMateria(materia2);
         alum1.agregarCalificacion(materia2.getMateria(), 6);
         alum1.imprimirCalificaciones();
 
+        //personal administrativo y agregarlos a la escuela
         personalAdm trabajador1 = new personalAdm("Juan Perez",10,"Conserje",3500.00);
         personalAdm trabajador2 = new personalAdm("Carlos Rivera", 11, "Analista", 10000.00);
         escuela1.agregarpersonal(trabajador1);
@@ -115,7 +131,9 @@ public class Mainescuela {
         System.out.println("Datos de escuela1:\n");
         escuela1.imprimirDatosGen();
 
-    
+        profesor4.imprimirMaterias();
+        materia7.imprimirProfesores();
+        
     }
     
 }

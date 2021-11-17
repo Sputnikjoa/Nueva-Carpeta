@@ -20,7 +20,8 @@ public class Profinvitado extends Profesor {
     public String getfechafinal(){
         return fecha_final;
     }
-
+    
+    //redefinicion de metodos
      @Override
      public void informacion() {
         System.out.println("Matricula: " + matricula + ", Tipo: "+ tipo+ "\n Nombre: " + nombre + ", Correo: " + correo +  ", Sueldo: $" + sueldo + ", Fecha de contrato " + fecha_contrato + ", Fecha fin " + fecha_final);

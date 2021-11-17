@@ -24,6 +24,11 @@ public class Profesor {
     public void agregarGrupo(Grupo g){
         grupos.add(g);
     }
+
+    public void agregarMateria(Materia m){
+        materias.add(m);
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -95,6 +100,12 @@ public class Profesor {
     public void imprimirGrupos(){
         for(Grupo aux : grupos){
             System.out.println(aux.getNomGrup());
+        }
+    }
+
+    public void imprimirMaterias(){
+        for(Materia aux : materias){
+            System.out.println(aux.getMateria());
         }
     }
 }
