@@ -10,5 +10,10 @@ public class Profmediotiempo extends Proftitular{
         tipo="medio tiempo";
     }
 
+    @Override
+     public void informacion() {
+        System.out.println("Matricula: " + matricula + ", Tipo: " + tipo + ", Turno: " + turno + "\n Nombre: " + nombre + ", Correo: " + correo +  ", Sueldo: $" + sueldo);
+    }
+
     
 }

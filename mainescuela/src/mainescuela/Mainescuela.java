@@ -6,7 +6,7 @@ public class Mainescuela {
     public static void main(String[] args) {
          //Creacion de la universidad
         Escuela escuela1 = new Escuela("ESCOM");
-        System.out.println(escuela1.getNombre());
+        System.out.println("Nombre de la escuela: " + escuela1.getNombre());
         
         //Creacion de las materias
         Materia materia1 = new Materia("Algebra lineal");
@@ -14,7 +14,6 @@ public class Mainescuela {
         Materia materia3 = new Materia("Paradigmas programacion");
         Materia materia4 = new Materia("Finanzas empresariales");
         Materia materia5 = new Materia("Bases de datos");
-        Materia materia6 = new Materia("Circuitos electricos");
         Materia materia7 = new Materia("Algoritmos");
         Materia materia8 = new Materia("Matematicas avanzadas");
 
@@ -24,16 +23,20 @@ public class Mainescuela {
         Profmediotiempo profesor3 = new Profmediotiempo(3456, "Jair", "jair@hotmail.com","matutino");
         Proftitular profesor4 = new Proftitular(4567, "Raul", "raulhn@hotmail.com");
         Profinvitado profesor5 = new Profinvitado(5678, "Javier", "javierr@hotmail.com","17/6/2020","18/7/2022");
-        Profinvitado profesor6 = new Profinvitado(6789, "Tamara", "tmra@hotmail.com","10/1/2019","10/1/2022");
-        Proftitular profesor7 = new Proftitular(7890, "Monserrat", "monsett@hotmail.com");
-        Profesor profesor8 = new Profesor(8901, "Eduardo", "eduardo@hotmail.com");
+        Profinvitado profesor6 = new Profinvitado(6789, "Tamara Rubio", "tmra@hotmail.com","10/1/2019","10/1/2022");
+        Proftitular profesor7 = new Proftitular(7890, "Monserrat Huerta", "monsett@hotmail.com");
 
+        System.out.println("\n---->Obteniendo informacion del profesor 1");
         profesor1.informacion();
+
+        System.out.println("\n---->Utilizando setter para poner el sueldo a profesores");
         profesor1.setSueldo(5434);
+        System.out.println("---->Informacion del profesor1 despues de poner el sueldo");
         profesor1.informacion();
+        System.out.println("\n---->Asignandoles sueldo a otros dos profesores y mostrar su informacion");
         profesor5.setSueldo(2340);
         profesor5.informacion();
-        profesor3.setSueldo(3400);
+        profesor3.setSueldo(34000.5);
         profesor3.informacion();
 
         //Creacion de alumnos y agregarlos a la escuela
@@ -41,6 +44,8 @@ public class Mainescuela {
         Alumno alum2 = new Alumno("Joaquin", 2018001, 3,"Presencial");
         Alumno alum3 = new Alumno("Joel", 2018002, 4,"Distancia");
         Alumno alum4 = new Alumno("Carlos", 2019012, 4,"Distancia");
+
+        System.out.println("Agregando los alumnos a la escuela");
         escuela1.agregarAlumno(alum1);
         escuela1.agregarAlumno(alum2);
         escuela1.agregarAlumno(alum3);
@@ -91,14 +96,13 @@ public class Mainescuela {
         materia7.agregarProfesor(profesor7);
         profesor7.agregarMateria(materia7);
 
-        //Agregando alumnos al grupo
+        //Agregando alumnos a los grupos
         grupo35.addAlumno(alum1);
         grupo35.addAlumno(alum2);
-
         grupo37.addAlumno(alum3);
         grupo37.addAlumno(alum4);
 
-        System.out.println("\nLos profesores del grupo 3CM5 son: ");
+        System.out.println("\nLos profesores del gruo 3CM5 son: ");
         grupo35.mostrarProfesores();
         System.out.println("\nLos alumnos del grupo 3CM5 son: ");
         grupo35.mostrarAlumnos();
@@ -115,6 +119,7 @@ public class Mainescuela {
         System.out.println("\nGrupos del profesor4: ");
         profesor4.imprimirGrupos();
 
+        System.out.println("\n");
         //Insertar calificaciones al alumno
         alum1.agregarMateria(materia1);
         alum1.agregarCalificacion(materia1.getMateria(), 9);
@@ -128,10 +133,13 @@ public class Mainescuela {
         escuela1.agregarpersonal(trabajador1);
         escuela1.agregarpersonal(trabajador2);
 
-        System.out.println("Datos de escuela1:\n");
+        System.out.println("\nDatos de escuela:");
         escuela1.imprimirDatosGen();
 
+        System.out.println("\nMaterias del profesor 4:");
         profesor4.imprimirMaterias();
+
+        System.out.println("\nProfesores que imparten la materia de Finanzas Empresariales:");
         materia7.imprimirProfesores();
         
     }
